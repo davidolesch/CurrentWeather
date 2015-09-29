@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="9052" systemVersion="14F27" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9040"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Current Weather View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CurrentWeatherViewController" customModule="Current_Weather" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Austin, Austin-Bergstrom International Airport" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sFe-pE-dlA" userLabel="Observation Location Name">
+                                <rect key="frame" x="480" y="354" width="960" height="172"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="72"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="75º F" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="POx-ag-1Wf" userLabel="Current Temperature">
+                                <rect key="frame" x="846.5" y="580.5" width="227.5" height="119.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="tPT-HO-Qlm">
+                                <rect key="frame" x="928" y="556" width="64" height="64"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sFe-pE-dlA" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="02F-NL-IQh"/>
+                            <constraint firstItem="tPT-HO-Qlm" firstAttribute="top" secondItem="sFe-pE-dlA" secondAttribute="bottom" constant="30" id="Ryv-uo-lBu"/>
+                            <constraint firstItem="POx-ag-1Wf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="100" id="SR7-UC-9As"/>
+                            <constraint firstItem="tPT-HO-Qlm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dPU-Jo-6xB"/>
+                            <constraint firstItem="sFe-pE-dlA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hFK-mG-8OR"/>
+                            <constraint firstItem="POx-ag-1Wf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hoz-Ug-I4G"/>
+                            <constraint firstItem="sFe-pE-dlA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-100" id="v5g-5I-qo4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="currentTemperatureLabel" destination="POx-ag-1Wf" id="KKd-e2-Hit"/>
+                        <outlet property="loadingIndicator" destination="tPT-HO-Qlm" id="Zc1-TI-6Vv"/>
+                        <outlet property="locationNameLabel" destination="sFe-pE-dlA" id="laC-bH-EHa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="312" y="312"/>
+        </scene>
+    </scenes>
+</document>
