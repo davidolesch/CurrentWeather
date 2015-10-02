@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D34DC1C21BBEE5E50031DA4A /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34DC1C11BBEE5E50031DA4A /* LocationManager.swift */; };
+		D34DC1C41BBF08CA0031DA4A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D34DC1C31BBF08CA0031DA4A /* CoreLocation.framework */; };
 		D3AEFD1E1BBAF09E00DA4359 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AEFD1D1BBAF09E00DA4359 /* AppDelegate.swift */; };
 		D3AEFD201BBAF09E00DA4359 /* CurrentWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AEFD1F1BBAF09E00DA4359 /* CurrentWeatherViewController.swift */; };
 		D3AEFD231BBAF09E00DA4359 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3AEFD211BBAF09E00DA4359 /* Main.storyboard */; };
@@ -16,6 +18,8 @@
 
 /* Begin PBXFileReference section */
 		B0A843111576B5B9D2B0CF5C /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D34DC1C11BBEE5E50031DA4A /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		D34DC1C31BBF08CA0031DA4A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		D3AEFD1A1BBAF09E00DA4359 /* Current Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Current Weather.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3AEFD1D1BBAF09E00DA4359 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3AEFD1F1BBAF09E00DA4359 /* CurrentWeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D34DC1C41BBF08CA0031DA4A /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,6 +44,7 @@
 		1B6FB3476CE33E51EF9B8838 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D34DC1C31BBF08CA0031DA4A /* CoreLocation.framework */,
 				B0A843111576B5B9D2B0CF5C /* Pods.framework */,
 			);
 			name = Frameworks;
@@ -67,6 +73,7 @@
 				D3AEFD1D1BBAF09E00DA4359 /* AppDelegate.swift */,
 				D3AEFD1F1BBAF09E00DA4359 /* CurrentWeatherViewController.swift */,
 				D3F21D181BBB160E008C1CFF /* WeatherManager.swift */,
+				D34DC1C11BBEE5E50031DA4A /* LocationManager.swift */,
 				D3AEFD211BBAF09E00DA4359 /* Main.storyboard */,
 				D3AEFD241BBAF09E00DA4359 /* Assets.xcassets */,
 				D3AEFD261BBAF09E00DA4359 /* Info.plist */,
@@ -143,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D34DC1C21BBEE5E50031DA4A /* LocationManager.swift in Sources */,
 				D3AEFD201BBAF09E00DA4359 /* CurrentWeatherViewController.swift in Sources */,
 				D3F21D191BBB160E008C1CFF /* WeatherManager.swift in Sources */,
 				D3AEFD1E1BBAF09E00DA4359 /* AppDelegate.swift in Sources */,

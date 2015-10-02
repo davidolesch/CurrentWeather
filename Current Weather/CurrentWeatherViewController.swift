@@ -1,13 +1,24 @@
 import UIKit
+import CoreLocation
 
 class CurrentWeatherViewController: UIViewController {
 
     @IBOutlet weak var locationNameLabel: UILabel!
     @IBOutlet weak var currentTemperatureLabel: UILabel!
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+
+    var locationManger: LocationManager!
     
-    let lat = 30.2436699
-    let lon = -97.7268667
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        locationManger = LocationManager.init { location in
+            let latitude = location.coordinate.latitude
+            let longitude = location.coordinate.longitude
+            
+            self.updateWeatherLabel(latitude, lon: longitude)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,12 +27,9 @@ class CurrentWeatherViewController: UIViewController {
         loadingIndicator.startAnimating()
     }
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
-        dispatch_async(dispatch_get_global_queue(priority, 0)) {
-            let currentObservation = currentObservationAtLat(self.lat, lon: self.lon)
+    func updateWeatherLabel(lat:CLLocationDegrees, lon:CLLocationDegrees) -> () {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+            let currentObservation = currentObservationAtLat(lat, lon: lon)
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 self.locationNameLabel.text = currentObservation.locationName
                 self.currentTemperatureLabel.text = currentObservation.currentTemperature
@@ -29,6 +37,5 @@ class CurrentWeatherViewController: UIViewController {
             })
         }
     }
-    
 }
 
